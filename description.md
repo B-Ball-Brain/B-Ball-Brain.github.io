@@ -6,12 +6,12 @@ order: 1
 
 ## Motivation
 
-Fantasy sports and sports betting are billion dollar industries.  Unsurprisingly, there are huge incentives in predicting the winner of a sports game.  In order to produce accurate predictions of a game’s outcome, many have turned to machine learning.  For example, a maximum entropy principle based algorithm has been used to perform predictions when features are correlated.[^cheng2016predicting] It also compares the results against a number of other classifiers, including ones like Naive Bayes.  These previous works show promising results, but are not perfect.  Events like player injuries, retirements, and player trades can greatly disrupt team dynamics.  A robust model should be able to take into account the chemistry of a team and address questions such as
+Fantasy sports and sports betting are multi-billion dollar industries.[^fantasy] [^2013think]  Unsurprisingly, there are huge incentives in predicting the winner of a sports game.  In order to produce accurate predictions of a game’s outcome, many have turned to machine learning.  Neural networks are a popular prediction technique, including feedforward neural networks, probabilistic neural networks, and generalized neural networks.[^torres2013prediction] [^loeffelholz2009predicting] [^mccabe2008artificial]  A maximum entropy principle based algorithm has been used to perform predictions when features are correlated.[^cheng2016predicting]  The results were compared against a number of other classifiers, including naive Bayes.  Other strategies include logistic regression, decision trees, and support vector machines.[^haghighat2013review]  These previous works show promising results, but are not perfect.  Events like player injuries, retirements, and player trades can greatly disrupt team dynamics.  A robust model should be able to take into account the chemistry of a team and address questions such as
 * How will Team X perform against Team Y?
 * A player on Team X is injured.  Who is the best substitute?
 * Given a starting lineup of Team Y, which players should Team X start to perform best?
 
-In order tackle these challenging questions, we hope to create a machine learning model that can find deep patterns and connections such as
+Many existing models are only designed to address the first question.  In order tackle these challenging questions, we hope to create a machine learning model that can find deep patterns and connections such as
 * A player that is good at assists would complement Team A
 * A player that shoots often and passes infrequently clashes with the play style of Team B
 
@@ -182,4 +182,10 @@ How does the model address the questions posed in the introduction?  It is easy 
 
 ## References
 
+[^fantasy]: “Fantasy Sports now a $7 Billion Industry.” FSTA, fsta.org/press-release-fantasy-sports-now-a-7-billion-industry/.
+[^2013think]: Spear, Gillian. “Think sports gambling isn't big money? Wanna bet?” NBCNews.com, NBCUniversal News Group, 15 July 2013, www.nbcnews.com/news/other/think-sports-gambling-isnt-big-money-wanna-bet-f6C10634316.
 [^cheng2016predicting]: Cheng, Ge, et al. "Predicting the Outcome of NBA Playoffs Based on the Maximum Entropy Principle." Entropy 18.12 (2016): 450.
+[^torres2013prediction]: Torres, Renator Amorim. "Prediction of nba games based on machine learning methods." University of Wisconsin, Madison (2013).
+[^loeffelholz2009predicting]: Loeffelholz, Bernard, Earl Bednar, and Kenneth W. Bauer. "Predicting NBA games using neural networks." Journal of Quantitative Analysis in Sports 5.1 (2009).
+[^mccabe2008artificial]: McCabe, Alan, and Jarrod Trevathan. "Artificial intelligence in sports prediction." Information Technology: New Generations, 2008. ITNG 2008. Fifth International Conference on. IEEE, 2008.
+[^haghighat2013review]: Haghighat, Maral, Hamid Rastegari, and Nasim Nourafza. "A review of data mining techniques for result prediction in sports." Advances in Computer Science: an International Journal 2.5 (2013): 7-12.
