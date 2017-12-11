@@ -1,0 +1,6 @@
+title: NBA Insight
+description: A machine learning tool for predicting the outcome of an NBA matchup
+permalink: pretty
+plugins:
+    - jekyll-sitemap
+    - jekyll-seo-tag
