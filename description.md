@@ -59,7 +59,7 @@ Therefore, in a single game, there are numerous "time capsules" and correspondin
     <tr>
         <th class="table-secondary" rowspan="3" colspan="2"></th>
         <th class="table-secondary" colspan="3">Season 1</th>
-        <th class="table-secondary" colspan="3">Season 2 &hellip;</th>
+        <th class="table-secondary" colspan="2">Season 2 &hellip;</th>
     </tr>
 
     <tr>
