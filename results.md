@@ -34,66 +34,60 @@ These results suggest that a classification model might perform better, as it si
 
 ## Comparison to Previous Work
 
-Torres et. al. and Loeffelholz et. all both attempted to predict results of NBA games using machine learning. They used box scores of teams from games played earlier in the season to train their models then they used the trained models to make predictions about the remaining games in the season. Below is a table showing the results from both experiments:
+Torres et. al. and Loeffelholz et. al. both attempted to predict results of NBA games using machine learning.[^loeffelholz2009predicting] [^torres2013prediction] They used box scores of teams from games played earlier in the season to train their models then they used the trained models to make predictions about the remaining games in the season. Below is a table showing the results from both experiments:
 
 <table class="table table-bordered table-sm">
     <tr>
-    	<th class="table-secondary" colspan="1">Models</th>
-        <th class="table-secondary" rowspan="1" colspan="1">Average Results from Validation set</th>
+        <th class="table-secondary">Source</th>
+    	<th class="table-secondary">Model</th>
+        <th class="table-secondary">Average Classification Accuracy</th>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">FFNN</th>
-        <td>71.67</td>
+        <td rowspan="6">Loeffelholz et. al.</td>
+    	<td>FFNN</td>
+        <td>71.67%</td>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">RBF</th>
-        <td>68.67</td>
+    	<td>RBF</td>
+        <td>68.67%</td>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">PNN</th>
-        <td>71.33</td>
+    	<td>PNN</td>
+        <td>71.33%</td>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">GRNN</th>
-        <td>71.33</td>
+    	<td>GRNN</td>
+        <td>71.33%</td>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">PNN Fusion</th>
-        <td>71.67</td>
+    	<td>PNN Fusion</td>
+        <td>71.67%</td>
     </tr>
     <tr>
-    	<th class="table-secondary" colspan="1">Bayes Fusion</th>
-        <td>71.67</td>
+    	<td>Bayes Fusion</td>
+        <td>71.67%</td>
     </tr>
-    </table>
+    <tr>
+        <td rowspan="4">Torres et. al.</td>
+    	<td>Linear Regression</td>
+        <td>69.91%</td>
+    </tr>
+    <tr>
+    	<td>Logistic Regression</td>
+        <td>67.44%</td>
+    </tr>
+    <tr>
+    	<td>SVM</td>
+        <td>65.96%</td>
+    </tr>
+    <tr>
+    	<td>ANN</td>
+        <td>64.78%</td>
+    </tr>
+</table>
 
-    Results from Loeffelholz et. al. showing predictions for 30 games in 2007 - 2008 NBA Season.
+Comparing the results from the table above with the results from our models, we can see that our models do a descent job of making predictions given that we are solving a harder problem of predicting results given player matchups rather than learning team performance over different games and seasons. Also, our model tries to select the best players to give a team the best chance of winning, and it learns by examining player statistics from a 30-second time capsules over a season. This presents a significant challenge even for a human expert.
 
-<table class="table table-bordered table-sm">
-    <tr>
-    	<th class="table-secondary" colspan="1">Models</th>
-        <th class="table-secondary" rowspan="1" colspan="1">Average Results from Validation set</th>
-    </tr>
-    <tr>
-    	<th class="table-secondary" colspan="1">Linear Regression</th>
-        <td>0.6991</td>
-    </tr>
-    <tr>
-    	<th class="table-secondary" colspan="1">Logistic Regression</th>
-        <td>0.6744</td>
-    </tr>
-    <tr>
-    	<th class="table-secondary" colspan="1">SVM</th>
-        <td>0.6596</td>
-    </tr>
-    <tr>
-    	<th class="table-secondary" colspan="1">ANN</th>
-        <td>0.6478</td>
-    </tr>
-   
-    </table>
-
-    Results from Torres et. al. showing mean of predictions for NBA games between 1992 - 1996.
-	
-
-Comparing the results from the tables above with the results from our model we can see that our models do a descent job of making predictions given that we are solving a harder problem of predicting results given player mash-ups rather than learning team performance over different games and seasons. Also, our model tries to select the best players to give a team the best chance of winning and it learns by examining player stats from a 30 seconds time capsule over for all the games played in a season. This presents a significant challenge even for a human expert.
+## References
+[^loeffelholz2009predicting]: Loeffelholz, Bernard, Earl Bednar, and Kenneth W. Bauer. "Predicting NBA games using neural networks." Journal of Quantitative Analysis in Sports 5.1 (2009).
+[^torres2013prediction]: Torres, Renator Amorim. "Prediction of nba games based on machine learning methods." University of Wisconsin, Madison (2013).
