@@ -90,8 +90,8 @@ order: 3
         <td>4.314991285</td>
         <td>4.073052891</td>
         <td>-0.0150366387</td>
-    </tr>
-    </table>
+    </tr>   
+</table>
 
     Results from our regression models for the play-offs games.
 
@@ -120,6 +120,7 @@ There are several reasons we have hypothesized as to why this noise is present
 These results suggest that a classification model might perform better, as it simplifies the problem.
 
 ## Classification
+
 <table class="table table-bordered table-sm">
     <tr>
     	<th class="table-secondary" colspan="1">Models</th>
@@ -169,7 +170,6 @@ These results suggest that a classification model might perform better, as it si
         <td>60.65%</td>
         <td>60.36%</td>
     </tr>
-    <tr>
     </table>
 
     Results from our classification models for the play-offs games.
