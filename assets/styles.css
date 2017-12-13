@@ -2,7 +2,7 @@ main {
     padding: 1.5em;
 }
 
-img.main {
+img.fluid-content {
     width: 80%;
     display: block;
     margin: 0.5em auto;

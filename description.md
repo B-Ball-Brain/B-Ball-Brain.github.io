@@ -51,7 +51,7 @@ $$
 
 With so many input arguments in the model, a large amount of training data is required.  A single example of training data requires knowing the exact ten players on the court during a portion of a game.  This is paired with a training label, which is the plus/minus per minute during that portion of the game.  Note that within a single game, there are several substitutions made by both teams that change the ten-player matchup on the court.
 
-<img class="main" alt="Game timeline" src="/assets/timeline.svg"/>
+<img class="fluid-content" alt="Game timeline" src="/assets/timeline.svg"/>
 
 Therefore, in a single game, there are numerous "time capsules" and corresponding plus/minus per minute labels that can be used for training.  Moreover, there are 30 NBA teams, each with 82 games per season.  We use all time capsules of at least five minutes from the 2016-17 regular season.  These training examples can be organized into a matrix:
 
