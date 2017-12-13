@@ -30,8 +30,8 @@ We also utilized scikit-learn for binary classification models.  Labels of +1 in
 * `GaussianNB`
 * `GradientBoostingClassifier`
 * `RandomForestClassifier`
-* A Feedforward Neural Network (`FNN`) in Keras using Dropout regularization
+* A Feedforward Neural Network (`FNN`) in [Keras](http://keras.io) using Dropout regularization
 
-We tuned the following classifiers: `LogisticRegression`, `GradientBoosting` and `FNN` to achieve ~60% accuracy in testing data while not over-fitting the models. For the `LogisticRegression` classifier, we set the constant, C, that multiplies the L2 regularization term to `C = 0.0005`. We set the number of estimators in GradientBoosting to `400` and the learning rate to `0.01`. We tried multiple other values for these parameters both small and big before we narrowed down on these values.
+We tuned the following classifiers: `LogisticRegression`, `GradientBoosting` and `FNN` to achieve ~60% accuracy in testing data while not over-fitting the models. For the `LogisticRegression` classifier, we set the constant, C, that multiplies the L2 regularization term to `C = 0.0005`. We set the number of estimators in GradientBoosting to 400 and the learning rate to 0.01. We tried multiple other values for these parameters both small and big before we narrowed down on these values.
 
 The Feedforward Neural Network has one hidden layer with 50 neurons, uses sigmoid as the activation funtion at both the hidden and the output layer. We use dropouts with `p = 0.5` at both the input and hidden layer.
