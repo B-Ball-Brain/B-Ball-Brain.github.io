@@ -93,6 +93,10 @@ order: 3
     </tr>   
 </table>
 
+Most regressors actually have metrics quite similar to the DummyRegressor (a regressor that disregards the input and only outputs the mean target value).  This shows that our 'smart' regressors are having trouble learning how any of the feature correlate to the plus/minus per minute target value.  
+
+There are two execptions out of the 'smart' regressors that attempted learning.  We can see that the Tree-based Regressors (ExtraTressRegressor and RandomForestRegressor) perform fairly well when looking at only the training data metrics.  They have a lower mean square error than the DummyRegressor.  However, when evaluating these two models against a test dataset rather than a training dataset, both the mean square error and $$R^2$$ score show much worse results than all other regressors, including the DummyRegressor.  This is certainly a sign of these models overfitting on the training data, and not learning the true relationship between the features and the target value.  
+
 ## Examining the Data
 
 The poor results of the regression models can be attributed to issues in the models or data.  A closer examination of the data indicates the latter due to a substantial amount of noise.
@@ -169,6 +173,8 @@ These results suggest that a classification model might perform better, as it si
         <td>60.36%</td>
     </tr>
 </table>
+
+Modifying our approach to a classification problem lets us train models that produce more meaningful results than the regression models.  Just like the previous approach, we can compare the smart models against a DummyClassifier, which only outputs the most common label.  We find all of our models perform at least as well as the DummyClassifier in terms of accuracy.  LogisticRegression, GradientBoostingClassifier, and FFN with Dropout even reach 60% accuracy while the DummyClassifier performs as well as a coin flip.  
 
 ## Comparison to Previous Work
 
