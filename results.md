@@ -6,7 +6,7 @@ order: 3
 
 ## Regression
 
-<table class="table table-bordered table-sm">
+<table class="table table-bordered table-sm table-responsive-md">
     <tr>
     	<th class="table-secondary">Models</th>
         <th class="table-secondary">Duration</th>
@@ -95,7 +95,17 @@ order: 3
 
 Most regressors actually have metrics quite similar to the DummyRegressor (a regressor that disregards the input and only outputs the mean target value).  This shows that our 'smart' regressors are having trouble learning how any of the feature correlate to the plus/minus per minute target value.  
 
-There are two execptions out of the 'smart' regressors that attempted learning.  We can see that the Tree-based Regressors (ExtraTressRegressor and RandomForestRegressor) perform fairly well when looking at only the training data metrics.  They have a lower mean square error than the DummyRegressor.  However, when evaluating these two models against a test dataset rather than a training dataset, both the mean square error and $$R^2$$ score show much worse results than all other regressors, including the DummyRegressor.  This is certainly a sign of these models overfitting on the training data, and not learning the true relationship between the features and the target value.  
+There are two execptions out of the 'smart' regressors that attempted learning.  We can see that the Tree-based Regressors (ExtraTressRegressor and RandomForestRegressor) perform fairly well when looking at only the training data metrics.  They have a lower mean square error than the DummyRegressor.  However, when evaluating these two models against a test dataset rather than a training dataset, both the mean square error and $$R^2$$ score show much worse results than all other regressors, including the DummyRegressor.  This is certainly a sign of these models overfitting on the training data, and not learning the true relationship between the features and the target value.
+
+<div class="row">
+    <div class="col-md-6">
+        <img class="img-fluid" src="/assets/rmse.png"/>
+    </div>
+
+    <div class="col-md-6">
+        <img class="img-fluid" src="/assets/r-square.png"/>
+    </div>
+</div>
 
 ## Examining the Data
 
@@ -123,7 +133,7 @@ These results suggest that a classification model might perform better, as it si
 
 ## Classification
 
-<table class="table table-bordered table-sm">
+<table class="table table-bordered table-sm table-responsive-sm">
     <tr>
     	<th class="table-secondary">Models</th>
         <th class="table-secondary">Duration</th>
@@ -180,7 +190,7 @@ Modifying our approach to a classification problem lets us train models that pro
 
 Torres et. al. and Loeffelholz et. al. both attempted to predict results of NBA games using machine learning.[^loeffelholz2009predicting] [^torres2013prediction] They used box scores of teams from games played earlier in the season to train their models then they used the trained models to make predictions about the remaining games in the season. Below is a table showing the results from both experiments:
 
-<table class="table table-bordered table-sm">
+<table class="table table-bordered table-sm table-responsive-sm">
     <tr>
         <th class="table-secondary">Source</th>
     	<th class="table-secondary">Model</th>
@@ -231,6 +241,16 @@ Torres et. al. and Loeffelholz et. al. both attempted to predict results of NBA 
 </table>
 
 Comparing the results from the table above with the results from our models, we can see that our models do a descent job of making predictions given that we are solving a harder problem of predicting results given player matchups rather than learning team performance over different games and seasons. Also, our model tries to select the best players to give a team the best chance of winning, and it learns by examining player statistics from a 30-second time capsules over a season. This presents a significant challenge even for a human expert.
+
+<div class="row">
+    <div class="col-md-6">
+        <img class="img-fluid" src="/assets/classifer-train-results.png"/>
+    </div>
+
+    <div class="col-md-6">
+        <img class="img-fluid" src="/assets/classifier-test-results.png"/>
+    </div>
+</div>
 
 ## References
 [^loeffelholz2009predicting]: Loeffelholz, Bernard, Earl Bednar, and Kenneth W. Bauer. "Predicting NBA games using neural networks." Journal of Quantitative Analysis in Sports 5.1 (2009).
